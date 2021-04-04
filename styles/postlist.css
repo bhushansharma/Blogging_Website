@@ -1,0 +1,162 @@
+body{
+    background-color:#ffeedd;
+}
+
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+    border-radius: 2rem;
+}
+.card :hover{
+    box-shadow: 8px 8px 8px grey;
+}
+.img-square-wrapper{
+    padding: 5px;
+    border-radius: 2rem;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:white;
+  pointer-events: none;
+}
+
+.card-body{
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    background-color:#D7DBDD
+}
+.card{
+    border-radius: 2rem;
+    
+}
+
+.card-title{
+    pointer-events: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: grey;
+}
+
+.col-6{
+    padding:20px;
+    max-width:45%;
+    border-radius: 2rem;
+}
+
+
+.card-text {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 3; 
+   -webkit-box-orient: vertical;
+   pointer-events: none;
+}
+
+.fa-trash-o, .fa-ellipsis-h{
+    float: right;
+    color:grey;
+}
+
+#delete-no-button{
+    
+   margin-left:50%;
+    width:20%;
+}
+#delete-yes-button{
+    
+    margin-left: 20px;
+    width:20%;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+#signUpForm, #signInForm{
+    padding:8px;
+}
+
+#delete-content{
+    padding:8px;
+}
+.w3-modal-content{
+    width:30%;
+    padding-bottom:5px;
+}
