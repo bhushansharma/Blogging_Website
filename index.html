@@ -2,12 +2,120 @@
 <html>
 
 <head>
-    <!-- TODO: Include Font Awesome file here -->
-    <!-- TODO: Include Google Fonts file here -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Library to get different font icons-->
+        <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+        <!-- Library to get w3 modals-->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+        <script src="scripts/index.js"></script>
+        <link href='styles/index.css' rel='stylesheet' type='text/css'>
+		<link href='styles/common.css' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
     <!-- TODO: Include all your code for the header and home page here -->
+	<div class="header">
+		<button class="headerButton" onclick="document.getElementById('signInModal').style.display='block'" >Sign In</button>
+		<button class="headerButton" onclick="document.getElementById('signUpModal').style.display='block'">Sign Up</button>
+		<a id="pageTitle" class="logo-title">ScriBBler</a>
+		<p class="middleText">Explore, Imagine, Create</p>
+	<!--Modals for sign up and sign in modal-->
+              <div id="signUpModal" class="w3-modal">
+				<div class="w3-modal-content" >
+				  <header class="w3-container "> 
+					<span onclick="document.getElementById('signUpModal').style.display='none'" 
+					class="w3-button w3-display-topright">&times;</span>
+					<h4>Get Started</h4>
+				  </header>
+					<form id="signUpForm">
+					  <div class="form-group">
+						<label for="name">Name</label>
+						<input type="text" class="form-control" id="name"  placeholder="Enter your name" required>
+					  </div>
+					  <div class="form-group">
+						<label for="username">Usernmae</label>
+						<input type="text" class="form-control" id="username"  placeholder="Enter your username" required>
+					  </div>
+					  <div class="form-group">
+						<label for="password">Password</label>
+						<input type="password" class="form-control" id="password" placeholder="Enter your Password" required>
+					  </div>
+					  <div class="form-group">
+						<label for="confirmPassword">Confirm Password</label>
+						<input type="password" class="form-control" id="confirmPassword" placeholder="Re-enter yourPassword" required>
+					  </div>
+					  <button type="submit" class="btn btn-success">Sign Up</button>
+					</form>
+				 
+				</div>
+			  </div>
+  
+			  <div id="signInModal" class="w3-modal">
+				<div class="w3-modal-content">
+				  <header class="w3-container "> 
+					<span onclick="document.getElementById('signInModal').style.display='none'" 
+					class="w3-button w3-display-topright">&times;</span>
+					<h4>Welcome Back!</h4>
+				  </header>
+					<form id="signInForm">
+					 
+					  <div class="form-group">
+						<label for="username">Usernmae</label>
+						<input type="text" class="form-control" id="username"  placeholder="Enter your username" required>
+					  </div>
+					  <div class="form-group">
+						<label for="password">Password</label>
+						<input type="password" class="form-control" id="password" placeholder="Enter your Password" required>
+					  </div>
+					 
+					  <button type="submit" class="btn btn-success">Sign In</button>
+					</form>
+					<center><p> Not a member? <a href="#" >Sign Up</a></p></center>
+				 
+				</div>
+			  </div>
+        </div> 
+        <!-- Post button in center of page -->
+        <div class="indexBody">
+            <a href="html/postslist.html" class="btn postButtons" role="button">All Posts</a>
+            <button class=" btn postButtons" onclick="document.getElementById('createPostModal').style.display='block'">Create Post</button>
+        </div>
+        
+    
+  
+  <!-- Modal for create post button -->
+	  <div id="createPostModal" class="w3-modal">
+		<div class="w3-modal-content" >
+		  <header class="w3-container "> 
+			<span onclick="document.getElementById('createPostModal').style.display='none'" 
+			class="w3-button w3-display-topright">&times;</span>
+			<h4>Pen Your Post</h4>
+		  </header>
+			<form id="createPostForm">
+			 
+			  <div class="form-group">
+				<label for="title">Title</label>
+				<input type="text" class="form-control" id="title"  placeholder="Enter title of your post" required>
+			  </div>
+			  <div class="form-group">
+				<label for="contents">Contents</label>
+				<textarea class="form-control" rows="5" id="contents" placeholder="Enter the contents of your post" required></textarea>
+				
+			  </div>
+			 
+			  <center><button type="submit" class="btn btn-success" style="width:30%;">Create</button></center>
+			</form>
+			
+		 
+		</div>
+		
+	</div>
 </body>
 
 </html>
