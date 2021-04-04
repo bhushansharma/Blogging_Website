@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Library to get different font icons-->
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Library to get w3 modals-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href='../styles/post.css' rel='stylesheet' type='text/css'>
+	<link href='../styles/common.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body >
+<!-- Header to show title and required buttons -->
+    <div class="header">
+		<button class="headerButton" onclick="document.getElementById('signInModal').style.display='block'" >Sign In</button>
+		<button class="headerButton" onclick="document.getElementById('signUpModal').style.display='block'">Sign Up</button>
+		<a id="pageTitle" class="logo-title">ScriBBler</a>
+		<p class="middleText">Explore, Imagine, Create</p>
+         <!--Modals for sign up and sign in modal-->   
+        <div id="signUpModal" class="w3-modal">
+			<div class="w3-modal-content">
+			  <header class="w3-container "> 
+				<span onclick="document.getElementById('signUpModal').style.display='none'" 
+				class="w3-button w3-display-topright">&times;</span>
+				<h4>Get Started</h4>
+			  </header>
+				<form id="signUpForm">
+				  <div class="form-group">
+					<label for="name">Name</label>
+					<input type="text" class="form-control" id="name"  placeholder="Enter your name" required>
+				  </div>
+				  <div class="form-group">
+					<label for="username">Usernmae</label>
+					<input type="text" class="form-control" id="username"  placeholder="Enter your username" required>
+				  </div>
+				  <div class="form-group">
+					<label for="password">Password</label>
+					<input type="password" class="form-control" id="password" placeholder="Enter your Password" required>
+				  </div>
+				  <div class="form-group">
+					<label for="confirmPassword">Confirm Password</label>
+					<input type="password" class="form-control" id="confirmPassword" placeholder="Re-enter yourPassword" required>
+				  </div>
+				  <button type="submit" class="btn btn-success">Sign Up</button>
+				</form>
+			 
+			</div>
+		</div>
+  
+		<div id="signInModal" class="w3-modal">
+			<div class="w3-modal-content" >
+			  <header class="w3-container "> 
+				<span onclick="document.getElementById('signInModal').style.display='none'" 
+				class="w3-button w3-display-topright">&times;</span>
+				<h4>Welcome Back!</h4>
+			  </header>
+				<form id="signInForm">
+				 
+				  <div class="form-group">
+					<label for="username">Usernmae</label>
+					<input type="text" class="form-control" id="username"  placeholder="Enter your username" required>
+				  </div>
+				  <div class="form-group">
+					<label for="password">Password</label>
+					<input type="password" class="form-control" id="password" placeholder="Enter your Password" required>
+				  </div>
+				 
+				  <button type="submit" class="btn btn-success">Sign In</button>
+				</form>
+				<center><p> Not a member? <a href="#" >Sign Up</a></p></center>
+			 
+			</div>
+		</div>
+    </div> 
+        
+    <!-- To display the details of post -->
+    <div class="postDetail">
+        <center> <h3 contenteditable="false" id="postTitle"></h3></center>
+        <div>
+            <span id="postAuthor" contenteditable="false"></span>
+            <button id="save" onclick="savePost()" style="display: none;">Save <i class="fa fa-save"></i></button>
+            <button id="edit" onclick="editPost()">Edit <i class="fa fa-edit"></i></button>   
+        </div>
+        <div id="postContent">
+
+        </div>
+        <div><button id="likeBlog" onclick="clickLike()"><i class="fa fa-thumbs-o-up"> </i> Like</button> </div>
+            
+        <div id="likeCount">Be the first person to like this!</div>
+        <br>
+        <textarea  placeholder="Add your comments" id="userComments" value="" rows="4" cols="100"> </textarea>
+        <br>
+        <button id="addList" onclick="addComments(userComments)">Comment</button>
+        <div><b>All Comments</b></div>
+        <div id="addEventNames"></div>
+    </div>
+
+    <script src="../scripts/post.js"></script>
+</body>
+
+</html>
