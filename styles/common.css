@@ -19,7 +19,12 @@ margin: auto;
 text-decoration: none;
 margin: 10px 10px 0px 10px;    
 }
-
+hr{
+	height:2px;
+	border-width:0;
+	color:gray;
+	background-color:gray
+}
 .middleText{
    font-family: 'Ubuntu Mono', monospace;
     margin-top: 0;
